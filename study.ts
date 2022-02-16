@@ -1,7 +1,10 @@
+// Make condition an Enum with values: substitute_in, substitute_out
+
 class Player { 
     static playercounter = 0;
     private ID: number;
     private condition: number;
+    //
     constructor(ID: number, condition:number){
         Player.playercounter += 1;
         if(Player.playercounter > 5){
@@ -10,6 +13,7 @@ class Player {
         this.ID = ID;
         this.condition = condition;
     }
+    //
     setID(ID: number) {
         if (ID > 0) {
             this.ID = ID;
@@ -20,9 +24,11 @@ class Player {
         }
         this.ID = ID;
     }
+    //
     getID() {
         return this.ID;
     }
+    // refactor
     setCondition(condition: number) {
         if (condition < 50) {
             console.log(`Igracot so broj ${this.ID} mora da se zameni `);
@@ -35,9 +41,11 @@ class Player {
         this.condition = condition;
 
     }
+    //
     getCondition() {
         return this.condition;
     }}
+    // Coach 
     class Coach extends Player{
        public Timeout : boolean;
        setTimeout(Timeout: boolean){
@@ -49,6 +57,8 @@ class Player {
        }
        
     }
+
+// put bellow code in a new class Main
 
 const Player1 = new Player(10,12);
 Player1.setID(11);
