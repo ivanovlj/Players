@@ -4,6 +4,7 @@ class Player {
     static playercounter = 0;
     private ID: number;
     private condition: number;
+    //
     constructor(ID: number, condition:number){
         Player.playercounter += 1;
         if(Player.playercounter > 5){
@@ -12,6 +13,7 @@ class Player {
         this.ID = ID;
         this.condition = condition;
     }
+    //
     setID(ID: number) {
         if (ID > 0) {
             this.ID = ID;
@@ -22,6 +24,7 @@ class Player {
         }
         this.ID = ID;
     }
+    //
     getID() {
         return this.ID;
     }
@@ -38,9 +41,11 @@ class Player {
         this.condition = condition;
 
     }
+    //
     getCondition() {
         return this.condition;
     }}
+    // Coach 
     class Coach extends Player{
        public Timeout : boolean;
        setTimeout(Timeout: boolean){
