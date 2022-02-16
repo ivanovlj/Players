@@ -1,3 +1,5 @@
+// Make condition an Enum with values: substitute_in, substitute_out
+
 class Player { 
     static playercounter = 0;
     private ID: number;
@@ -23,6 +25,7 @@ class Player {
     getID() {
         return this.ID;
     }
+    // refactor
     setCondition(condition: number) {
         if (condition < 50) {
             console.log(`Igracot so broj ${this.ID} mora da se zameni `);
@@ -49,6 +52,8 @@ class Player {
        }
        
     }
+
+// put bellow code in a new class Main
 
 const Player1 = new Player(10,12);
 Player1.setID(11);
